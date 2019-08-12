@@ -1,3 +1,20 @@
-.loginbox{
-    background-color: rgba(0, 0,0, 0.5);
+#loginbox{
+    color: azure;
+    background-color: rgba(1,1,1,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 30px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    
+}
+button{
+    background-color: gold;
+    border: none;
+    box-sizing: border-box;
 }
