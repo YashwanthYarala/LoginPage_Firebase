@@ -19,8 +19,11 @@ $(document).ready(function(){
 
          data.ref().on('value',function(snap){
              var uname = snap.val().username;
-             alert(uname);
-             data.ref().set({username:2});
+             if(username == uname)
+             {
+               alert('logging in');
+             }
+             
          });
 
          
