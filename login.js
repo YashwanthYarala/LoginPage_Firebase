@@ -13,16 +13,15 @@ var firebaseConfig = {
 $(document).ready(function(){
     var username ;
     var password;
+    $("#reglink").click(function(){
+      window.open("./register.html");
+    })
     $('#btn1').click(function(){
          username = document.getElementById("username").value;
          password = document.getElementById("password").value;
 
          data.ref().on('value',function(snap){
              var uname = snap.val().username;
-             if(username == uname)
-             {
-               alert('logging in');
-             }
              
          });
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+    </script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+<script src="./register.js"></script>
+
+</head>
+<body>
+        <center>
+                <div id="registerbox">
+                        <table>
+                            <tr><td>SignUp</td></tr>
+                            <tr><td><label for="username">Username</label></td></tr>
+                            <tr><td><input type="text" id="username" placeholder="Enter Username"></td></tr>
+                            <tr><td><label for="password">Password</label></td></tr>
+                            <tr><td><input type="password" id="password" placeholder="Enter Password"></td></tr>
+                            <tr><td><label for="repassword">Re-Password</label></td></tr>
+                            <tr><td><input type="password" id="repassword" placeholder="Re-Enter Password"></td></tr>
+                            <center><tr><td><button class="btn"  id="btn1" type="button">Sign up</button></td></tr>
+                           
+                            </center>
+                            
+                        </table> 
+                    </div>
+        </center>
+          
+</body>
+</html>
