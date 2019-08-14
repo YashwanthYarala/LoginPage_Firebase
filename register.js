@@ -15,6 +15,7 @@ var firebaseConfig = {
            var username ;
            var password;
            var repass;
+           var user = [];
            $("#btn1").click(function(){
                username = document.getElementById("username").value;
                password = document.getElementById("password").value;
@@ -22,6 +23,7 @@ var firebaseConfig = {
                if(password == repass)
                {
                    alert("password matched");
+                   
 
                }
                else{
