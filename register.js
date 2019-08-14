@@ -10,24 +10,39 @@ var firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
   var data = firebase.database();
-  
-        $(document).ready(function(){
-           var username ;
-           var password;
-           var repass;
-           var user = [];
-           $("#btn1").click(function(){
-               username = document.getElementById("username").value;
-               password = document.getElementById("password").value;
-               repass = document.getElementById("repassword").value;
-               if(password == repass)
-               {
-                   alert("password matched");
-                   
+         data.ref().on('value',function(snap){
+                basename = snap.val().basename;
+                basepass = snap.val().basepass;
+                     $("#btn1").click(function()
+                     {
+                         var username ;
+                         var password;
+                         var repass;
+                         var uname , pass;
+                         var basename = [];
+                         var basepass  = [];
+                          username = document.getElementById("username").value;
+                          password = document.getElementById("password").value;
+                          repass = document.getElementById("repassword").value;
+                                  
+                            data.ref().on('value',function(snap)
+                                 {
+                                    basename = snap.val().basename;
+                                    basepass = snap.val().basepass;
+                                    basename.push(username);
+                                    data.ref().update({basename});
+                                    
+                                                 
+                                 });
+                                })
+                            
+                             
+                             
+                            
+                             });
+                  
 
-               }
-               else{
-                   alert("password not matched");
-               }
-           })
-        })
+               
+              
+           
+
